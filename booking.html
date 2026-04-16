@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Appointment | Pink Nail 💅</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR UPDATED -->
+<header class="navbar">
+  <div class="logo">💅 Pink Nail</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="booking-container animate">
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+  <h1 class="title">Book Appointment 💅✨</h1>
+
+  <!-- SERVICES -->
+  <div class="card">
+    <h3>Choose Your Services 💖</h3>
+
+    <!-- Nail Art -->
+    <div class="service-dropdown">
+      <div class="dropdown-header" onclick="toggleDropdown('nailart')">
+        💅 Nail Art
+      </div>
+      <div id="nailart" class="dropdown-content">
+        <div onclick="addService('3D Nail Art',799)">3D Nail Art ₹799</div>
+        <div onclick="addService('Bridal Nail Art',1499)">Bridal Nail Art ₹1499</div>
+        <div onclick="addService('Glitter Nail Art',999)">Glitter Nail Art ₹999</div>
+      </div>
+    </div>
+
+    <!-- Manicure -->
+    <div class="service-dropdown">
+      <div class="dropdown-header" onclick="toggleDropdown('manicure')">
+        🌸 Manicure
+      </div>
+      <div id="manicure" class="dropdown-content">
+        <div onclick="addService('Gel Manicure',799)">Gel Manicure ₹799</div>
+        <div onclick="addService('Spa Manicure',999)">Spa Manicure ₹999</div>
+      </div>
+    </div>
+
+    <!-- Pedicure -->
+    <div class="service-dropdown">
+      <div class="dropdown-header" onclick="toggleDropdown('pedicure')">
+        ✨ Pedicure
+      </div>
+      <div id="pedicure" class="dropdown-content">
+        <div onclick="addService('Spa Pedicure',999)">Spa Pedicure ₹999</div>
+        <div onclick="addService('Luxury Pedicure',1299)">Luxury Pedicure ₹1299</div>
+      </div>
+    </div>
+
+    <!-- Selected -->
+    <div id="selectedServices" class="selected-list">
+      No services added yet 💅
+    </div>
+  </div>
+
+  <!-- ❌ DATE & TIME REMOVED CLEANLY -->
+
+  <!-- USER -->
+  <div class="card">
+    <h3>Your Details ✨</h3>
+
+    <input type="text" id="userName" placeholder="Your Name 💖">
+    <input type="tel" id="userPhone" placeholder="Phone Number 📞" maxlength="10">
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="card">
+    <h3>Order Summary 💅</h3>
+    <div id="summary">No services selected yet.</div>
+  </div>
+
+  <button class="main-btn" onclick="submitBooking()">
+    Book via WhatsApp 💖
+  </button>
+
+</section>
+
+<!-- THANK YOU MODAL -->
+<div id="thankYouModal" class="modal">
+  <div class="modal-content">
+    <div class="checkmark">✔</div>
+    <h2>Booking Confirmed 💖</h2>
+    <p>See you soon 💅✨</p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
